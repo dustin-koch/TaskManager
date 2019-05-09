@@ -18,18 +18,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="86" id="r2D-tF-45o" customClass="TaskTableViewCell" customModule="TaskManager" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="86"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="93" id="r2D-tF-45o" customClass="TaskTableViewCell" customModule="TaskManager" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="93"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r2D-tF-45o" id="0SI-YG-rfM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="92.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LnI-tv-SqB">
-                                            <rect key="frame" x="28" y="19" width="374" height="64"/>
+                                            <rect key="frame" x="28" y="19" width="374" height="71"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3z2-p1-Qht">
-                                                    <rect key="frame" x="0.0" y="7.5" width="316" height="49"/>
+                                                    <rect key="frame" x="0.0" y="11" width="331" height="49"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVT-QC-YYr">
                                                             <rect key="frame" x="0.0" y="0.0" width="35" height="20.5"/>
@@ -45,11 +45,11 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDx-nm-326">
-                                                    <rect key="frame" x="324" y="7" width="50" height="50"/>
+                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDx-nm-326">
+                                                    <rect key="frame" x="339" y="18" width="35" height="35"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="rJd-wY-XAw"/>
-                                                        <constraint firstAttribute="width" constant="50" id="xiD-ea-O9g"/>
+                                                        <constraint firstAttribute="height" constant="35" id="rJd-wY-XAw"/>
+                                                        <constraint firstAttribute="width" constant="35" id="xiD-ea-O9g"/>
                                                     </constraints>
                                                     <state key="normal" image="checked">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="863.768115942029" y="161.38392857142856"/>
         </scene>
-        <!--Title-->
+        <!--Task Details-->
         <scene sceneID="C5T-cV-azg">
             <objects>
                 <tableViewController id="8ew-0J-UJj" customClass="TaskDetailTableViewController" customModule="TaskManager" customModuleProvider="target" sceneMemberID="viewController">
@@ -190,7 +190,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="nKI-mY-iHa">
+                    <navigationItem key="navigationItem" title="Task Details" id="nKI-mY-iHa">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="MuT-xu-os2">
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="8ew-0J-UJj" id="abJ-Du-oSf"/>

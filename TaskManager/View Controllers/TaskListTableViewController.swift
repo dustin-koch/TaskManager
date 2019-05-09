@@ -32,7 +32,6 @@ class TaskListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return TaskController.shared.tasks.count
     }
 
@@ -47,6 +46,7 @@ class TaskListTableViewController: UITableViewController {
             } else {
             cell.taskCompleteSquare.setImage(UIImage(named: "unchecked"), for: .normal)
         }
+        cell.delegate = self
         return cell
     }
 
@@ -71,4 +71,17 @@ class TaskListTableViewController: UITableViewController {
             destinationVC?.task = task
         }
     }
+} //end of class
+
+extension TaskListTableViewController: TaskTableViewCellDelegate {
+    func toggleSettingForCell(cell: TaskTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        let task = TaskController.shared.tasks[indexPath.row]
+        TaskController.shared.changeBool(task: task)
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+        TaskController.shared.saveToPersistence()
+        
+    }
+    
+    
 }
